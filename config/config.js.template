@@ -58,7 +58,7 @@ let config = {
 						fetchInterval: 1 * 24 * 60 * 60 * 1000,
 						maximumNumberOfDays: 8,
 						symbol: "calendar-check",
-						url: "CALENDAR_URL"
+						url: "${CALENDAR_URL}"
 					}
 				]
 			}
@@ -70,7 +70,7 @@ let config = {
 				weatherProvider: "openweathermap",
 				type: "current",
 				location: "Massy, FR",
-				apiKey: "OPENWEATHERMAP_API_KEY"
+				apiKey: "${OPENWEATHERMAP_API_KEY}"
 			}
 		},
 		{
