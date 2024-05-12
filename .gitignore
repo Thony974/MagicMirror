@@ -57,6 +57,10 @@ Temporary Items
 .directory
 .Trash-*
 
+# Ignore users config file but keep the template.
+/config/*
+!/config/config.js.template
+
 # Vim
 ## swap
 [._]*.s[a-w][a-z]
