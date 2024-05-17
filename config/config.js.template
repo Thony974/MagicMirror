@@ -30,8 +30,8 @@ let config = {
 	httpsPrivateKey: "",	// HTTPS private key path, only require when useHttps is true
 	httpsCertificate: "",	// HTTPS Certificate path, only require when useHttps is true
 
-	language: "en",
-	locale: "en-US",
+	language: "fr",
+	locale: "fr-FR",
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
 	units: "metric",
@@ -53,9 +53,10 @@ let config = {
 			header: "Mon agenda (chenmosdine)",
 			position: "top_left",
 			config: {
+				tableClass: "medium",
+				fetchInterval: 1 * 60 * 60 * 1000,
 				calendars: [
 					{
-						fetchInterval: 1 * 24 * 60 * 60 * 1000,
 						maximumNumberOfDays: 8,
 						symbol: "calendar-check",
 						url: "${CALENDAR_URL}"
@@ -86,8 +87,8 @@ let config = {
 						"Salut Rodin"
 					],
 					evening: [
-						"Kossa ou fé encore debout ?!",
-						"Allé dormi"
+						"Kossa ou fé debout ?",
+						"Allé a ou dormi",
 					]
 				}
 			}
@@ -123,7 +124,7 @@ let config = {
 						"kok mon voizin grosër mon marmit (Ce que le voisin possède est toujours objet de convoitise, toujours plus beau que ce que l'on a)",
 						"koshon i komann pa la kord (Vous ne pouvez diriger quelqu'un qui doit vous diriger)",
 						"Koulër la po lé pa koulër lo kèr (La couleur de la peau, ne vous dit pas quel genre de personnage est l'autre)",
-						"krapo i argard aou, ou lé pa blizé guèt ali gro zië (C'est pas parce que'on vous regarde que vous devez défigurer l'autre)",
+						"krapo i argard aou, ou lé pa blizé guèt ali gro zië (C'est pas parce qu'on vous regarde que vous devez défigurer l'autre)",
 						"La lang na poin le zo (Tu fais que d'parler)",
 						"Na in zour i apèl domin (Demain est un autre jour)",
 						"Nouri lo ver pou pik out kër (Être trahi par quelqu'un à qui on a donné sa confiance)",
