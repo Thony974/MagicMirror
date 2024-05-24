@@ -50,7 +50,7 @@ let config = {
 		},
 		{
 			module: "calendar",
-			header: "Mon agenda (chenmosdine)",
+			header: "chenmosdine",
 			position: "top_left",
 			config: {
 				tableClass: "medium",
