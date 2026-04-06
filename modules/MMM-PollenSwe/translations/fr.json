@@ -1,0 +1,29 @@
+{
+  "LOADING": "Chargement des données...",
+  "NO_DATA": "Pas de données de pollen disponibles",
+  "POLLEN_FORECAST": "Prévisions Pollens",
+  "ATTRIBUTION": "Data: OpenMeteo",
+  "TEST_MODE": "Test Mode - Sample Data",
+
+  "LEVEL_NONE": "Aucun",
+  "LEVEL_LOW": "Faible",
+  "LEVEL_LOW_MEDIUM": "Faible à Moyen",
+  "LEVEL_MEDIUM": "Moyen",
+  "LEVEL_MEDIUM_HIGH": "Moyen à Élevé",
+  "LEVEL_HIGH": "Élevé",
+  "LEVEL_HIGH_VERY_HIGH": "Élevé à Très Élevé",
+  "LEVEL_VERY_HIGH": "Très Élevé",
+
+  "POLLEN_TYPES": {
+    "Alder": "Aulne",
+    "Wormwood": "Armoise",
+    "Mugwort": "Pollen d'armoise",
+    "Birch": "Bouleau",
+    "Hazel": "Noisetier",
+    "Beech": "Hêtre",
+    "Grass": "Graminées",
+    "Oak": "Chêne",
+    "Willow": "Saule",
+    "Elm": "Orme"
+  }
+}

@@ -149,6 +149,16 @@ let config = {
 					]
 				}
 			}
+		},
+		{
+			module: "MMM-PollenSwe",
+			position: "top_right", // Choose your preferred position
+			config: {
+				region: "Massy", // Specify region name
+				updateInterval: 3600000, // Update every hour
+				showIcon: true, // Show icons for pollen levels
+				maxPollensShown: 4 // Number of pollen types to display
+			}
 		}
 	]
 };
