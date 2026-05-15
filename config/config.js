@@ -55,7 +55,7 @@ let config = {
 			position: "top_left",
 			config: {
 				tableClass: "medium",
-				fetchInterval: 1 * 60 * 60 * 1000,
+				fetchInterval: 1 * 60 * 60 * 1000, // 1 hour
 				calendars: [
 					{
 						maximumNumberOfDays: 8,
@@ -68,18 +68,46 @@ let config = {
 		{
 			module: "weather",
 			position: "top_right",
+			header: "OpenMeteo",
 			config: {
-				weatherProvider: "openweathermap",
+				weatherProvider: "openmeteo",
+				updateInterval: 10 * 60 * 1000, // 10 minutes
 				type: "current",
-				location: "Massy, FR",
-				apiKey: "${OPENWEATHERMAP_API_KEY}"
+				showSun: false,
+				tableClass: "medium",
+				lat: "${OPENMETEO_LAT}",
+				lon: "${OPENMETEO_LON}"
+			}
+		},
+		{
+			module: "weather",
+			position: "top_right",
+			config: {
+				weatherProvider: "openmeteo",
+				updateInterval: 24 * 3600000, // 24 hours
+				type: "forecast",
+				tableClass: "medium",
+				appendLocationNameToHeader: false,
+				colored: true,
+				lat: "${OPENMETEO_LAT}",
+				lon: "${OPENMETEO_LON}"
+			}
+		},
+		{
+			module: "MMM-PollenSwe",
+			position: "top_right", 
+			config: {
+				region: "Massy",
+				updateInterval: 3600000, // 1 hour
+				showIcon: true,
+				maxPollensShown: 4
 			}
 		},
 		{
 			module: "compliments",
 			position: "middle_center",
 			config: {
-				updateInterval: 15 * 1000,
+				updateInterval: 15 * 1000, // 15 seconds
 				compliments: {
 					morning: [
 						"Bonjour Anthony",
@@ -98,7 +126,7 @@ let config = {
 			module: "compliments",
 			position: "bottom_bar",
 			config: {
-				updateInterval: 1 * 24 * 60 * 60 * 1000,
+				updateInterval: 24 * 3600000, // 24 hours
 				classes: "thin medium bright",
 				compliments: {
 					anytime: [
@@ -149,16 +177,6 @@ let config = {
 						"Lo promier i lance galet, a li mem i tend pas la zou (Celui qui ne se remet jamais en question est le premier à critiquer)"
 					]
 				}
-			}
-		},
-		{
-			module: "MMM-PollenSwe",
-			position: "top_right", // Choose your preferred position
-			config: {
-				region: "Massy", // Specify region name
-				updateInterval: 3600000, // Update every hour
-				showIcon: true, // Show icons for pollen levels
-				maxPollensShown: 4 // Number of pollen types to display
 			}
 		}
 	]
