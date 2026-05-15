@@ -1,7 +1,4 @@
-/* MagicMirror² Config Sample
- *
- * By Michael Teeuw https://michaelteeuw.nl
- * MIT Licensed.
+/* Config Sample
  *
  * For more information on how you can configure this file
  * see https://docs.magicmirror.builders/configuration/introduction.html
@@ -31,7 +28,11 @@ let config = {
 	httpsCertificate: "",	// HTTPS Certificate path, only require when useHttps is true
 
 	language: "fr",
-	locale: "fr-FR",
+	locale: "fr-FR",   // this variable is provided as a consistent location
+			   // it is currently only used by 3rd party modules. no MagicMirror code uses this value
+			   // as we have no usage, we  have no constraints on what this field holds
+			   // see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
+
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
 	units: "metric",
