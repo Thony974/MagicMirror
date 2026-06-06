@@ -97,10 +97,12 @@ let config = {
 			module: "MMM-PollenSwe",
 			position: "top_right", 
 			config: {
-				region: "Massy",
+				pollenTypes: ["grass_pollen", "birch_pollen", "alder_pollen", "mugwort_pollen"],
+				latitude: 48.7269,
+        		longitude: 2.283,
 				updateInterval: 3600000, // 1 hour
 				showIcon: true,
-				maxPollensShown: 4
+				showValue: true
 			}
 		},
 		{
