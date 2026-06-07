@@ -84,7 +84,7 @@ let config = {
 			position: "top_right",
 			config: {
 				weatherProvider: "openmeteo",
-				updateInterval: 24 * 3600000, // 24 hours
+				updateInterval: 3600000, // 1 hour
 				type: "forecast",
 				tableClass: "medium",
 				appendLocationNameToHeader: false,
