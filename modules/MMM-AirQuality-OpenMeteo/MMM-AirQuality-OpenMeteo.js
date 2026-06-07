@@ -1,13 +1,13 @@
 /* Magic Mirror
- * Module: MMM-PollenSwe
+ * Module: MMM-AirQuality-OpenMeteo
  * 
- * By Christian Gillinger
+ * By Anthony M.
  * MIT Licensed.
  * 
- * Data provided by Swedish Museum of Natural History's Pollen API
- * https://api.pollenrapporten.se/docs
+ * Data provided by OpenMeteo Air Quality API:
+ * https://open-meteo.com/en/docs/air-quality-api
  */
-Module.register("MMM-PollenSwe", {
+Module.register("MMM-AirQuality-OpenMeteo", {
     defaults: {
         language: config.language || "en",
         updateInterval: 3600000, // Update every hour
@@ -35,7 +35,7 @@ Module.register("MMM-PollenSwe", {
     },
 
     getStyles: function() {
-        return ["MMM-PollenSwe.css"];
+        return ["MMM-AirQuality-OpenMeteo.css"];
     },
 
     getTranslations: function() {
