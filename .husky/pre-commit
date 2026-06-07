@@ -1,5 +1,5 @@
 #!/bin/sh
 
-#if command -v npx &> /dev/null; then
-#  npx lint-staged
-#fi
+if command -v npx &> /dev/null; then
+  npx lint-staged
+fi
