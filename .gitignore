@@ -59,6 +59,7 @@ Temporary Items
 
 # Ignore users config file but keep the samples.
 config
+!config/config.js
 !config/config.js.sample
 !config/custom.css.sample
 

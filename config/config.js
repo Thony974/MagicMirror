@@ -1,7 +1,4 @@
-/* MagicMirror² Config Sample
- *
- * By Michael Teeuw https://michaelteeuw.nl
- * MIT Licensed.
+/* Config Sample
  *
  * For more information on how you can configure this file
  * see https://docs.magicmirror.builders/configuration/introduction.html
@@ -31,7 +28,11 @@ let config = {
 	httpsCertificate: "",	// HTTPS Certificate path, only require when useHttps is true
 
 	language: "fr",
-	locale: "fr-FR",
+	locale: "fr-FR",   // this variable is provided as a consistent location
+			   // it is currently only used by 3rd party modules. no MagicMirror code uses this value
+			   // as we have no usage, we  have no constraints on what this field holds
+			   // see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
+
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
 	units: "metric",
@@ -54,7 +55,7 @@ let config = {
 			position: "top_left",
 			config: {
 				tableClass: "medium",
-				fetchInterval: 1 * 60 * 60 * 1000,
+				fetchInterval: 1 * 60 * 60 * 1000, // 1 hour
 				calendars: [
 					{
 						maximumNumberOfDays: 8,
@@ -67,18 +68,48 @@ let config = {
 		{
 			module: "weather",
 			position: "top_right",
+			header: "OpenMeteo",
 			config: {
-				weatherProvider: "openweathermap",
+				weatherProvider: "openmeteo",
+				updateInterval: 10 * 60 * 1000, // 10 minutes
 				type: "current",
-				location: "Massy, FR",
-				apiKey: "${OPENWEATHERMAP_API_KEY}"
+				showSun: false,
+				tableClass: "medium",
+				lat: "${OPENMETEO_LAT}",
+				lon: "${OPENMETEO_LON}"
+			}
+		},
+		{
+			module: "weather",
+			position: "top_right",
+			config: {
+				weatherProvider: "openmeteo",
+				updateInterval: 24 * 3600000, // 24 hours
+				type: "forecast",
+				tableClass: "medium",
+				appendLocationNameToHeader: false,
+				colored: true,
+				lat: "${OPENMETEO_LAT}",
+				lon: "${OPENMETEO_LON}"
+			}
+		},
+		{
+			module: "MMM-AirQuality-OpenMeteo",
+			position: "top_right",
+			config: {
+				pollenTypes: ["grass_pollen", "birch_pollen", "alder_pollen", "mugwort_pollen"],
+				latitude: 48.7269,
+				longitude: 2.283,
+				updateInterval: 3600000, // 1 hour
+				showIcon: true,
+				showValue: true
 			}
 		},
 		{
 			module: "compliments",
 			position: "middle_center",
 			config: {
-				updateInterval: 15 * 1000,
+				updateInterval: 15 * 1000, // 15 seconds
 				compliments: {
 					morning: [
 						"Bonjour Anthony",
@@ -97,7 +128,7 @@ let config = {
 			module: "compliments",
 			position: "bottom_bar",
 			config: {
-				updateInterval: 1 * 24 * 60 * 60 * 1000,
+				updateInterval: 24 * 3600000, // 24 hours
 				classes: "thin medium bright",
 				compliments: {
 					anytime: [
